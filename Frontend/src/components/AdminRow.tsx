@@ -49,9 +49,8 @@ const AdminRow: React.FC<Props> = ({ user, admin }) => {
 
       Object.entries(roleState).forEach(([k, v]) =>
         v ? newRoles.push(k as Role) : null
-      ) // {ITEMEDITOR: true, ADMIN: false} --> [[ITEMEDITOR, true], [ADMIN, false]]
+      ) 
 
-      // Check if the user.roles array has not been changed --> do not call to backend
       if (user.roles.length === newRoles.length) {
         const checkRoles = user.roles.map((role) => newRoles.includes(role))
 
@@ -61,7 +60,10 @@ const AdminRow: React.FC<Props> = ({ user, admin }) => {
         }
       }
 
-      const response = await updateRoles({ variables: { userId, newRoles } })
+      const response = await updateRoles({
+        variables: { userId, newRoles },
+        refetchQueries: [{ query: QUERY_USERS }],
+      })
 
       if (response.data?.updateRoles) {
         setIsEditing(false)
