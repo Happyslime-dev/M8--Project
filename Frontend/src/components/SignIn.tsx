@@ -42,18 +42,16 @@ const SignIn: React.FC<Props> = () => {
 
       if (response?.data?.signin) {
         const user = response.data.signin
-        // Close form
+
         handleAuthAction('close')
 
-        // Set auth user in context api
         setAuthUser(user)
 
-        // Push user to admin page or dashboard page
         if (isAdmin(user)) {
-          // Push user to their admin page
+
           router.push('/admin')
         } else {
-          // Push user to their dashboard page
+
           router.push('/dashboard')
         }
       }
@@ -72,11 +70,15 @@ const SignIn: React.FC<Props> = () => {
         <StyledSocial>
           <button className='facebook'>
             <FontAwesomeIcon icon={['fab', 'facebook-f']} size='lg' />
-            <a>Sign in with Facebook</a>
+            <a href={`${process.env.NEXT_PUBLIC_FACEBOOK_LOGIN_URI}`}>
+              Log in with Facebook
+            </a>
           </button>
           <button className='google'>
             <FontAwesomeIcon icon={['fab', 'google']} />
-            <a>Sign in with Google</a>
+            <a href={`${process.env.NEXT_PUBLIC_GOOGLE_LOGIN_URI}`}>
+              Log in with Google
+            </a>
           </button>
         </StyledSocial>
 
