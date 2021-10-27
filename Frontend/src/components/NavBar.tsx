@@ -1,11 +1,13 @@
 import React, { useContext } from 'react'
 import Link from 'next/link'
+import { useMutation } from '@apollo/client'
 import { useRouter } from 'next/router'
 import styled from 'styled-components'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 import { AuthContext } from '../context/AuthContextProvider'
 import { isAdmin } from '../helpers/authHelpers'
+import { SIGN_OUT } from '../apollo/mutations'
 
 interface Props {}
 
@@ -56,7 +58,7 @@ const Ul = styled.ul`
     display: none;
   }
   .active {
-    color: ${(props) => props.theme.fontColors.primary};
+    color: ${(props) => props.theme.fontColors.tertiary};
   }
   a {
     text-decoration: none;
@@ -99,13 +101,31 @@ const NavBar: React.FC<Props> = () => {
   )
 
   const router = useRouter()
+  const [signout] = useMutation<{ signout: { message: string } }>(SIGN_OUT)
+
+  const handleSignout = async () => {
+    try {
+      const response = await signout()
+
+      if (response?.data?.signout?.message) {
+
+        setAuthUser(null)
+
+        window.localStorage.setItem('signout', Date.now().toString())
+
+        router.push('/')
+      }
+    } catch (error) {
+      alert('Sorry, cannot proceed.')
+    }
+  }
 
   return (
     <Header>
       <Nav>
         <Link href='/'>
           <Logo>
-            <a className={router.pathname === '/' ? 'active' : ''}>MyShop</a>
+            <a className={router.pathname === '/' ? 'active' : ''}>NASA Museum</a>
           </Logo>
         </Link>
         <Ul>
@@ -137,7 +157,7 @@ const NavBar: React.FC<Props> = () => {
         </Ul>
         <Actions>
           {loggedInUser ? (
-            <button onClick={() => setAuthUser(null)}>Sign Out</button>
+            <button onClick={handleSignout}>Sign Out</button>
           ) : (
             <>
               <button onClick={() => handleAuthAction('signin')}>

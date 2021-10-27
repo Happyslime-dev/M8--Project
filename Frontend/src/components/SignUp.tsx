@@ -173,13 +173,10 @@ const SignUp: React.FC<Props> = () => {
         const { signup } = response.data
 
         if (signup) {
-          // Close form
           handleAuthAction('close')
 
-          // Set loggedInUser in context api
           setAuthUser(signup)
 
-          // Push user to their dashboard
           router.push('/dashboard')
         }
       }
