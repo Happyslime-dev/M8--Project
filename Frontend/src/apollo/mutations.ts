@@ -32,22 +32,6 @@ export const SIGN_OUT = gql`
   }
 `
 
-export const REQUEST_TO_RESET_PASSWORD = gql`
-  mutation REQUEST_TO_RESET_PASSWORD($email: String!) {
-    requestResetPassword(email: $email) {
-      message
-    }
-  }
-`
-
-export const RESET_PASSWORD = gql`
-  mutation RESET_PASSWORD($token: String!, $password: String!) {
-    resetPassword(token: $token, password: $password) {
-      message
-    }
-  }
-`
-
 export const UPDATE_ROLES = gql`
   mutation UPDATE_ROLES($userId: String!, $newRoles: [String!]!) {
     updateRoles(userId: $userId, newRoles: $newRoles) {
