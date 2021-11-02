@@ -13,7 +13,7 @@ This is a website about NASA photo gallery and news site. Access to the website 
 - Node.js
 - GraphQL
 - MongoDB
-writing with Typescript
+* writing with Typescript 
 ## Setup and Getting start Project
 1.Clone the repositories
 ```
