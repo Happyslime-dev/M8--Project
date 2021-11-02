@@ -1,13 +1,17 @@
 # M8 Project - NASA Museum
 
 ## About the project
-This is a website about NASA photo gallery and news site. Access to the website requires a membership or login. When the user has successfully logged in will be able to access the website and use it.
+This is a website about NASA. The website contains NASA photo galleries and news. Access to the website requires a membership or sign in. Once the user has successfully signed in, they will be able to access the website and use it.
 ## Feature
 - Sign Up
-- Sign in
-- Gallery
-- News
+- Sign in (Facebook and google)
+- View photo gallery
+- View News
 ## Preview Project
+
+## Screenshots
+![m8--project](https://user-images.githubusercontent.com/84006058/139919515-a912d2fb-f51a-4cea-a6e0-523dfd3cc909.PNG)
+
 ### Developed with
 - Next.js
 - Node.js
@@ -22,14 +26,14 @@ https://github.com/Jaoearn/M8--Project.git
 2.Install Backend Dependencies
 ```
 $ cd Backend
-$ npm install
-$ npm run dev
+$ npm install or yarn install
+$ npm run dev or yarn run dev
 ```
 3.Install Frontend Dependencies
 ```
 $ cd Frontend
-$ npm install
-$ npm run dev
+$ npm install or yarn install
+$ npm run dev or yarn run dev
 ```
 ### API Integration
 - Facebook login
@@ -41,9 +45,9 @@ $ npm run dev
 - News API
   - https://newsapi.org
 ### API authentication mechanisms before starting playing around with the application
-I use JWT authentication mechanisms  in my project,because it easy to authenticate and set up deverlop.
+I use JWT authentication mechanisms in my project, because it easy to authenticate and set up develop.
 ### API authentication mechanisms
- In term of API authentication mechanisms to access path in application, the user must be authenticated by login before using our application.  When user Sign In success user will get the token back as jwt .Then the application will check user token in every path by passport Strategy for verification.If user don't have token they can not access a function.
+In terms of API authentication mechanisms to access path in the application, the user must be authenticated by sign in before using our application. When user Sign In success user will get the token back as jute .Then the application will check user token in every path by the passport Strategy for verification. If the user doesn't have token they cannot access a function.
 ### Contact
 - Email : Sutheera_preenan@cmu.ac.th
  
