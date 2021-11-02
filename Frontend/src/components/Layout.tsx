@@ -70,8 +70,8 @@ const Layout: React.FC<Props> = ({ children }) => {
   const { asPath, replace, pathname, query } = useRouter()
 
   useEffect(() => {
-    if (asPath === '/dashboard#_=_' || asPath === '/dashboard#') {
-      replace('/dashboard')
+    if (asPath === '/news#_=_' || asPath === '/news#') {
+      replace('/news')
     }
 
     if (asPath === '/#_=_' || asPath === '/#') {

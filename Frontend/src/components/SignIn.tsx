@@ -52,7 +52,7 @@ const SignIn: React.FC<Props> = () => {
           router.push('/admin')
         } else {
 
-          router.push('/dashboard')
+          router.push('/news')
         }
       }
     } catch (error) {

@@ -130,17 +130,24 @@ const NavBar: React.FC<Props> = () => {
         </Link>
         <Ul>
         {loggedInUser && (
-          <Link href='/products'>
-            <a className={router.pathname === '/products' ? 'active' : ''}>
-              Products
+          <Link href='/asteroids'>
+            <a className={router.pathname === '/asteroids' ? 'active' : ''}>
+            Asteroids
+            </a>
+          </Link>
+          )}
+          {loggedInUser && (
+          <Link href='/earth'>
+            <a className={router.pathname === '/earth' ? 'active' : ''}>
+            Earth
             </a>
           </Link>
           )}
           
           {loggedInUser && (
-            <Link href='/dashboard'>
-              <a className={router.pathname === '/dashboard' ? 'active' : ''}>
-                Dashboard
+            <Link href='/news'>
+              <a className={router.pathname === '/news' ? 'active' : ''}>
+              News
               </a>
             </Link>
           )}

@@ -177,7 +177,7 @@ const SignUp: React.FC<Props> = () => {
 
           setAuthUser(signup)
 
-          router.push('/dashboard')
+          router.push('/news')
         }
       }
     } catch (error) {
