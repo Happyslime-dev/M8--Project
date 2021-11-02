@@ -1,4 +1,4 @@
-# M8 Project - NASA Museum
+# M8 Project - NASA News
 
 ## About the project
 This is a website about NASA. The website contains NASA photo galleries and news. Access to the website requires a membership or sign in. Once the user has successfully signed in, they will be able to access the website and use it.

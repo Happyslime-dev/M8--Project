@@ -1,4 +1,4 @@
-# M8 Project - NASA Museum
+# M8 Project - NASA News
 
 Project full-stack application using GraphQL, Next.js,Node.js, Mongodb writing in Typescript.
 

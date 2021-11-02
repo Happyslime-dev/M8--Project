@@ -125,7 +125,7 @@ const NavBar: React.FC<Props> = () => {
       <Nav>
         <Link href='/'>
           <Logo>
-            <a className={router.pathname === '/' ? 'active' : ''}>NASA Museum</a>
+            <a className={router.pathname === '/' ? 'active' : ''}>NASA News</a>
           </Logo>
         </Link>
         <Ul>
