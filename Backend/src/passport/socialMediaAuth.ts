@@ -31,7 +31,7 @@ export const FBAuthenticate = async (req: AppRequest, res: Response) => {
 
       sendToken(res, token)
 
-      res.redirect(`${FRONTEND_URI}/dashboard`)
+      res.redirect(`${FRONTEND_URI}/news`)
     } else {
 
       token = createToken(user.id, user.tokenVersion)
@@ -39,7 +39,7 @@ export const FBAuthenticate = async (req: AppRequest, res: Response) => {
 
       sendToken(res, token)
 
-      res.redirect(`${FRONTEND_URI}/dashboard`)
+      res.redirect(`${FRONTEND_URI}/news`)
     }
   } catch (error) {
     res.redirect(FRONTEND_URI!)
@@ -71,7 +71,7 @@ export const GoogleAuthenticate = async (req: AppRequest, res: Response) => {
 
       sendToken(res, token)
 
-      res.redirect(`${FRONTEND_URI}/dashboard`)
+      res.redirect(`${FRONTEND_URI}/news`)
     } else {
 
       token = createToken(user.id, user.tokenVersion)
@@ -79,7 +79,7 @@ export const GoogleAuthenticate = async (req: AppRequest, res: Response) => {
 
       sendToken(res, token)
 
-      res.redirect(`${FRONTEND_URI}/dashboard`)
+      res.redirect(`${FRONTEND_URI}/news`)
     }
   } catch (error) {
     res.redirect(FRONTEND_URI!)

@@ -23,12 +23,6 @@ export class User {
   tokenVersion: number
 
   @prop()
-  resetPasswordToken?: string
-
-  @prop()
-  resetPasswordTokenExpiry?: number
-
-  @prop()
   facebookId?: string
 
   @prop()
