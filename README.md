@@ -10,7 +10,7 @@ This is a website about NASA. The website contains NASA photo galleries and news
 ## Preview Project
 
 ## Screenshots
-![m8--project](https://user-images.githubusercontent.com/84006058/139919515-a912d2fb-f51a-4cea-a6e0-523dfd3cc909.PNG)
+![M8](https://user-images.githubusercontent.com/84006058/139928091-e6a863ed-ec52-4cbb-99ac-0765e9de7662.PNG)
 
 ### Developed with
 - Next.js
