@@ -64,8 +64,6 @@ const startServer = async () => {
       GoogleAuthenticate
     )
 
-    app.get('/auth/twitter', passport.authenticate('twitter'))
-
     const server = await createServer()
 
     server.applyMiddleware({
